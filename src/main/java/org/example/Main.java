@@ -1,6 +1,9 @@
 package org.example;
 
-import java.time.Period;
+import org.example.Challenge1.Medication;
+import org.example.Challenge1.Pharmacy;
+import org.example.Session1.Person;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -53,5 +56,24 @@ public class Main {
 
         //Check if key exists
         boolean isPresent = currywurst.containsKey("1");
+        System.out.println("Ab hier Challenge1:_____________________");
+
+        //Challenge1:
+
+        //Add medicine
+        Medication medication1 = new Medication("Aspirin", 9.99,true);
+        Medication medication2 = new Medication("VitaminB12", 3.20,false);
+        Medication medication3 = new Medication("Paracetamol", 8.49,false);
+
+        Pharmacy pharmacy = new Pharmacy();
+        pharmacy.save(medication1);
+        pharmacy.save(medication2);
+        pharmacy.save(medication3);
+        pharmacy.printAll();
+        System.out.println(pharmacy.getCount());
+        System.out.println(pharmacy.find("Aspirin"));
+        pharmacy.delete("VitaminB12");
+        pharmacy.printAll();
+        System.out.println(pharmacy.find("a"));
     }
 }

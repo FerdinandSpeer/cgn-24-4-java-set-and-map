@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Session1;
 
 import java.util.Objects;
 
